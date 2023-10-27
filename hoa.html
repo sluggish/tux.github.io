@@ -88,34 +88,60 @@
         .pages {
             text-align: right; 
         }
+        /* Add animation to "page content" */
+        .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+        }
+
+        #contents {
+        display: show;
+        text-align: center;
+        }
         </style>
     </head>
-    <body>
-        <div class="pages">
-            <p><a href="index.html">back to main</a> <a href="members.html">members</a></p>
-	    <center><h1>Tux Gang HOA</h1></center>
-        </div>
-        <div class="container">
-            <div class="image">
-                <img src="https://cdn.discordapp.com/attachments/1135976027080904804/1135999885980741814/image.png" width="25%">
+    <body onload="myFunction()">
+        <div id="loader"></div>
+        <div id="contents" class="animate-bottom">
+            <div class="pages">
+                <p><a href="index.html">back to main</a> <a href="members.html">members</a></p>
+            <center><h1>Tux Gang HOA</h1></center>
             </div>
-            <div class="name">
-                <p>Vyqer</p>
+            <div class="container">
+                <div class="image">
+                    <img src="https://cdn.discordapp.com/attachments/1135976027080904804/1135999885980741814/image.png" width="25%">
+                </div>
+                <div class="name">
+                    <p>Vyqer</p>
+                </div>
+                <div class="description">
+                    <p>Meet Jceon Palmer, this joke of a hacker wakes up one day and gathers his imbecile friends and creates a C2, well, not creates, but finds on youtube and proceeds to rip everything he lays his eyes on, his C2 has free API's, and NO bots (fake bots). We proceed, as layta exposes him and his clique for all being script kiddies and having absoloutly no clue what they are doing. then he accidentally turns his camera on butt ass naked with a cheeseburger on a plate and some mac'n cheese (this being after he calls us fat), kid looks to be about 5'3 170lbs. proceeds to dance to the "booter squad 2.0" song, then I9 gets added into the call, then he gets scared and says that its "not the real I9" (lol).</p>
+                    <a href="https://m.youtube.com/watch?v=kf2AB4xZLZw" target="_blank">video of him failing to hit tuxgang.org</a>
+                </div>
             </div>
-            <div class="description">
-                <p>Meet Jceon Palmer, this joke of a hacker wakes up one day and gathers his imbecile friends and creates a C2, well, not creates, but finds on youtube and proceeds to rip everything he lays his eyes on, his C2 has free API's, and NO bots (fake bots). We proceed, as layta exposes him and his clique for all being script kiddies and having absoloutly no clue what they are doing. then he accidentally turns his camera on butt ass naked with a cheeseburger on a plate and some mac'n cheese (this being after he calls us fat), kid looks to be about 5'3 170lbs. proceeds to dance to the "booter squad 2.0" song, then I9 gets added into the call, then he gets scared and says that its "not the real I9" (lol).</p>
-                <a href="https://m.youtube.com/watch?v=kf2AB4xZLZw" target="_blank">video of him failing to hit tuxgang.org</a>
-            </div>
-        </div>
-        <div class="container">
-            <div class="image">
-                <img src="https://media.discordapp.net/attachments/1166559534450491393/1167297310494035978/b1udDl9.png?ex=654d9d56&is=653b2856&hm=fb61ca9a8afe95a3e3bf885a962c876b9be311e79f256dea9baf33609521ed10&=&width=590&height=473" width="25%">
-            </div>
-            <div class="name">
-                <p>Dax</p>
-            </div>
-            <div class="description">
-                <p>Dax.. Self explanatory. Accused R3P of being a pedophile which his DOB is 9/7/07 but he's a yapper as we all know. Online rapist famous for his quote towards Adri, "u wanna get raped?" in which she responded "yes :3" bad looks. Pro DaHoodian, makes some BADASS Roblox montages (no..). Anyways, nobody really fucks with the kid anyway. #TuxGang #BossedUp #TMO #TLO</p>
+            <div class="container">
+                <div class="image">
+                    <img src="https://media.discordapp.net/attachments/1166559534450491393/1167297310494035978/b1udDl9.png?ex=654d9d56&is=653b2856&hm=fb61ca9a8afe95a3e3bf885a962c876b9be311e79f256dea9baf33609521ed10&=&width=590&height=473" width="25%">
+                </div>
+                <div class="name">
+                    <p>Dax</p>
+                </div>
+                <div class="description">
+                    <p>Dax.. Self explanatory. Accused R3P of being a pedophile which his DOB is 9/7/07 but he's a yapper as we all know. Online rapist famous for his quote towards Adri, "u wanna get raped?" in which she responded "yes :3" bad looks. Pro DaHoodian, makes some BADASS Roblox montages (no..). Anyways, nobody really fucks with the kid anyway. #TuxGang #BossedUp #TMO #TLO</p>
+                </div>
             </div>
         </div>
     </body>
