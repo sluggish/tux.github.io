@@ -177,5 +177,38 @@
                 </div>
             </div>
         </div>
+        <audio id="hoa-audio" src="song.mp3" autoplaystyle="display:none"></audio>
+        <script>
+
+            (function () {
+                        const hoaAudio = document.getElementById('hoa-audio');
+
+                        function catchHandler() {
+                            // Audio playback was blocked.
+                            // We will register input listeners to wait until the user has interacted with the page before playing again.
+
+                            let inputListener;
+                            inputListener = function () {
+                                hoaAudio.play();
+                                document.removeEventListener('mousedown', inputListener);
+                                document.removeEventListener('keydown', inputListener);
+                            };
+
+                            document.addEventListener('mousedown', inputListener);
+                            document.addEventListener('keydown', inputListener);
+                        }
+
+                        if (hoaAudio.readyState > 1) {
+                            // The audio is ready to be played.
+                            hoaAudio.play().catch(catchHandler);
+                        } else {
+                            // The audio cannot be played yet, wait until it is loaded.
+                            hoaAudio.addEventListener('canplay', function () {
+                                hoaAudio.play().catch(catchHandler);
+                            });
+                        }
+                    })();
+                
+        </script>
     </body>
 </html>
